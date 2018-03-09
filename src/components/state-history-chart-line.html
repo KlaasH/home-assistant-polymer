@@ -139,7 +139,7 @@ class StateHistoryChartLine extends Polymer.Element {
           const curTemp = safeParseFloat(state.attributes.current_temperature);
           const series = [curTemp];
           if (hasHeat) {
-            series.push(state.state === 'heat' ? curTemp : null);
+            series.push(state.attributes.operation === 'heat' ? curTemp : null);
           }
           if (hasCool) {
             series.push(state.state === 'cool' ? curTemp : null);
